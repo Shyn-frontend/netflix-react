@@ -22,6 +22,7 @@ function Row(api: Props) {
       try {
         setMovies(request.data.results);
         return request;
+        // sayHi
         // eslint-disable-next-line no-empty
       } catch {}
     }
