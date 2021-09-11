@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Banner.css';
+import './index.css';
 import axios from 'axios';
 interface Movie {
   backdrop_path: string;
@@ -19,7 +19,8 @@ function Banner() {
             Math.floor(Math.random() * request.data.results.length - 1)
           ],
         );
-      } catch (error) {}
+        // eslint-disable-next-line no-empty
+      } catch {}
     }
     fetchData();
   }, []);
