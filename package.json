@@ -21,10 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix",
-    "prettier": "prettier 'src/**/*.ts'",
-    "prettier:fix": "prettier --write 'src/**/*.ts'"
+    "lint": "eslint --ext .tsx,.ts,.js,.jsx src/ --fix",
+    "prettier": "prettier --write"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +48,6 @@
     "prettier": "2.4.0"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "npm run prettier"
   }
 }
