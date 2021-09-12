@@ -14,6 +14,15 @@
   margin-right: 10px;
   width: 100%;
   transition: transfom 450ms;
+  object-fit: contain;
+}
+.row__posterLarge {
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transfom 450ms;
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
 }
 .row__poster:hover {
   transform: scale(1.1);
