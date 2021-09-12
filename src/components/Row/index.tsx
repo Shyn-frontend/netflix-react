@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.css';
+
 interface API {
   title: string;
   fetchUrl: string;
@@ -19,12 +20,10 @@ function Row(api: Props) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(api.api.fetchUrl);
-      try {
+      {
         setMovies(request.data.results);
         return request;
-        // sayHi
-        // eslint-disable-next-line no-empty
-      } catch {}
+      }
     }
     fetchData();
   }, [api.api.fetchUrl]);

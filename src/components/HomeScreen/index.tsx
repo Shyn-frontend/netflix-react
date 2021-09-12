@@ -3,6 +3,7 @@ import './index.css';
 import Nav from '../Nav';
 import Banner from '../Banner';
 import Row from '../Row';
+
 function HomeScreen() {
   const api = [
     {

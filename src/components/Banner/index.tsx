@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
 import axios from 'axios';
+
 interface Movie {
   backdrop_path: string;
   name: string;
@@ -13,14 +14,13 @@ function Banner() {
       const request = await axios.get(
         'https://api.themoviedb.org/3/discover/tv?api_key=b0d938d735b67d7de27f09ccd5ad60cb&with_networks=213',
       );
-      try {
+      {
         setMovies(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length - 1)
           ],
         );
-        // eslint-disable-next-line no-empty
-      } catch {}
+      }
     }
     fetchData();
   }, []);
